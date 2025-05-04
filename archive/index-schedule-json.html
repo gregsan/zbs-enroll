@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Курсы</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					},
+					colors: {
+						primary: '#3a5192',
+						online: '#ACC572',
+						recorded: '#94B4C1'
+					},
+					animation: {
+						fadeIn: 'fadeIn 0.5s ease-out',
+						slideUp: 'slideUp 0.5s ease-out',
+						fadeInScale: 'fadeInScale 0.3s ease-out'
+					},
+					keyframes: {
+						fadeIn: {
+							from: { opacity: '0' },
+							to: { opacity: '1' }
+						},
+						slideUp: {
+							from: { transform: 'translateY(20px)', opacity: '0' },
+							to: { transform: 'translateY(0)', opacity: '1' }
+						},
+						fadeInScale: {
+							from: { opacity: '0', transform: 'scale(0.95)' },
+							to: { opacity: '1', transform: 'scale(1)' }
+						}
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+		}
+		.course-card.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body class="bg-gray-100 text-white min-h-screen flex flex-col justify-between leading-relaxed text-base">
+	<div class="max-w-lg mx-auto w-full p-4">
+		<h1 class="text-4xl font-bold text-center mb-4 text-black leading-tight">Zorin Business School</h1>
+		<h2 class="text-2xl font-semibold text-center mb-6 text-black">Расписание курсов</h2>
+
+		<div class="flex flex-wrap justify-center gap-2 mb-6">
+			<!-- <button data-filter="all" class="filter-btn border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition hover:bg-primary hover:text-white">Все</button> -->
+			<button data-filter="online" class="filter-btn border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition hover:bg-primary hover:text-white">Онлайн курсы</button>
+			<button data-filter="запись" class="filter-btn border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition hover:bg-primary hover:text-white">Записи курсов</button>
+		</div>
+
+		<div id="courses" class="flex flex-col gap-6"></div>
+	</div>
+
+	<footer class="text-center text-sm text-gray-500 py-4 w-full bg-gray-100">© 2025 #ZBS | Zorin Business School. Design & Develop with ❤️ by Gr.</footer>
+
+	<script>
+		const coursesData = [
+			{
+				id: 1,
+				title: 'Управление людьми 2.0 (pt. 2)',
+				label: 'online',
+				start: '15 мая 2025',
+				duration:'6 недель',
+				description: 'Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично',
+				detailsUrl: '#',
+				signupUrl: '#',
+				monthGroup: 'Май 2025'
+			},
+			{
+				id: 2,
+				title: 'Финансы семьи',
+				label: 'запись',
+				lessons: 8,
+				graduates: 35,
+				description: 'Практический курс по настройке финансов внутри семьи. На реальном примере за 8 недель сложим P&L семьи, интегрируем его в привычную жизнь и научимся его адаптировать под текущию ситуацию в жизни',
+				detailsUrl: '#',
+				signupUrl: '#'
+			},
+			{
+				id: 3,
+				title: 'Управление проектами',
+				label: 'online',
+				start: '22 июня 2025',
+				duration:'6 недель',
+				description: 'На 6 недель станете руководителем проекта. Определимся с терминологией, подготовимся к старту, пройдем по всем этапам и завершим проект',
+				detailsUrl: '#',
+				signupUrl: '#',
+				monthGroup: 'Июнь 2025'
+			},
+			{
+				id: 4,
+				title: 'Управление людьми 2.0 (pt. 1)',
+				label: 'запись',
+				lessons: 10,
+				graduates: 310,
+				description: 'Лекции. В ходе которых разберем кто мы такие, как мы устроены, как можно научиться управлять собой, а потом перенести это на управление другими людьми и отношениями с ними',
+				detailsUrl: '#',
+				signupUrl: '#'
+			},
+			{
+				id: 5,
+				title: 'MBA от Зорина',
+				label: 'запись',
+				lessons: 152,
+				graduates: 310,
+				description: 'Лучший курс для операционного руководителя бизнеса любого размера',
+				detailsUrl: '#',
+				signupUrl: '#'
+			}
+		];
+
+		const coursesContainer = document.getElementById('courses');
+	const filterButtons = document.querySelectorAll('.filter-btn');
+
+	function renderCourses(filter = 'all') {
+  coursesContainer.innerHTML = '';
+  const filtered = filter === 'all' ? coursesData : coursesData.filter(course => course.label === filter);
+
+  let lastGroup = null;
+
+  filtered.forEach(course => {
+    if (course.monthGroup && course.monthGroup !== lastGroup) {
+      lastGroup = course.monthGroup;
+      const separator = document.createElement('div');
+      separator.className = 'text-lg font-semibold text-gray-700 mt-4 mb-2 border-b border-gray-300 pb-1';
+      separator.textContent = course.monthGroup;
+      coursesContainer.appendChild(separator);
+    }
+
+    const card = document.createElement('div');
+    card.className = 'course-card bg-white text-black rounded-xl p-5 shadow-md animate-slideUp hover:scale-[1.01] transition-transform';
+    card.innerHTML = `
+      <div class="flex justify-between items-center mb-3 text-gray-700">
+        <h3 class="text-2xl font-semibold">${course.title}</h3>
+        <span class="text-xs px-2 py-1 rounded-full ${course.label === 'online' ? 'bg-online text-white' : 'bg-recorded text-white'}">${course.label}</span>
+      </div>
+      ${course.label === 'online' ? `
+        <p class="text-md mb-1 font-medium text-gray-600">Старт: <span class="font-normal">${course.start}</span></p>
+        <p class="text-md mb-1 font-medium text-gray-600">Длительность: <span class="font-normal">${course.duration}</span></p>` 
+        : `
+        <p class="text-md mb-1 font-medium text-gray-600">Занятий: ${course.lessons}</p>
+        <p class="text-md mb-1 font-medium text-gray-600">Выпускников: ${course.graduates}</p>`}
+      <p class="text-md mb-3 mt-1 leading-relaxed text-gray-600">${course.description}</p>
+      <div class="flex gap-2">
+        <a href="${course.signupUrl}" class="bg-primary text-white py-1.5 px-4 text-sm rounded-lg hover:opacity-90 transition-all">Записаться</a>
+        <a href="${course.detailsUrl}" class="border border-primary text-primary py-1.5 px-4 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">Подробнее</a>
+      </div>
+    `;
+    coursesContainer.appendChild(card);
+			});
+		}
+
+
+		filterButtons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				filterButtons.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+				btn.classList.add('bg-primary', 'text-white');
+				const filter = btn.getAttribute('data-filter');
+				renderCourses(filter);
+			});
+		});
+
+		// Устанавливаем фильтр "online" по умолчанию при загрузке
+		document.querySelector('[data-filter="online"]').classList.add('bg-primary', 'text-white');
+		renderCourses('online');
+	</script>
+</body>
+</html>
