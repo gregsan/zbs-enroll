@@ -7,8 +7,8 @@
     "start": "15 мая 2025",
     "duration": "6 недель",
     "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
-    "detailsUrl": "#",
-    "signupUrl": "#",
+    "detailsUrl": "/enroll-ul-online.html",
+    "signupUrl": "/enroll-ul-online.html",
     "monthGroup": "Май 2025"
   },
   {
@@ -18,8 +18,8 @@
     "lessons": 8,
     "graduates": 35,
     "description": "Практический курс по настройке финансов внутри семьи...",
-    "detailsUrl": "#",
-    "signupUrl": "#"
+    "detailsUrl": "/enroll-hfn.html",
+    "signupUrl": "/enroll-hfn.html"
   },
   {
     "id": 3,
@@ -28,8 +28,8 @@
     "start": "22 июня 2025",
     "duration": "6 недель",
     "description": "На 6 недель станете руководителем проекта...",
-    "detailsUrl": "#",
-    "signupUrl": "#",
+    "detailsUrl": "/enroll-pjc.html",
+    "signupUrl": "/enroll-pjc.html",
     "monthGroup": "Июнь 2025"
   },
   {
@@ -39,8 +39,8 @@
     "lessons": 10,
     "graduates": 310,
     "description": "Лекции. В ходе которых разберем кто мы такие...",
-    "detailsUrl": "#",
-    "signupUrl": "#"
+    "detailsUrl": "/enroll-ul.html",
+    "signupUrl": "/enroll-ul.html",
   },
   {
     "id": 5,
@@ -49,7 +49,7 @@
     "lessons": 152,
     "graduates": 310,
     "description": "Лучший курс для операционного руководителя бизнеса...",
-    "detailsUrl": "#",
-    "signupUrl": "#"
+    "detailsUrl": "/enroll-mba.html",
+    "signupUrl": "/enroll-mba.html"
   }
 ]
