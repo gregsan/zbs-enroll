@@ -20,7 +20,7 @@ function renderCourses(coursesData, filter = 'all') {
     if (course.monthGroup && course.monthGroup !== lastGroup) {
       lastGroup = course.monthGroup;
       const separator = document.createElement('div');
-      separator.className = 'text-lg font-semibold text-gray-700 mt-4 mb-2 border-b border-gray-300 pb-1';
+      separator.className = 'text-xl font-semibold text-gray-700 mt-4 mb-2 border-b border-gray-300 pb-1';
       separator.textContent = course.monthGroup;
       coursesContainer.appendChild(separator);
     }
@@ -41,7 +41,6 @@ function renderCourses(coursesData, filter = 'all') {
       <p class="text-md mb-3 mt-1 leading-relaxed text-gray-600">${course.description}</p>
       <div class="flex gap-2">
         <a href="${course.signupUrl}" class="bg-primary text-white py-1.5 px-4 text-sm rounded-lg hover:opacity-90 transition-all">Записаться</a>
-        <a href="${course.detailsUrl}" class="border border-primary text-primary py-1.5 px-4 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">Подробнее</a>
       </div>
     `;
     coursesContainer.appendChild(card);
