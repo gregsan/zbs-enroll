@@ -1,15 +1,14 @@
-
 [
   {
     "id": 1,
     "title": "Воркшоп по переговорам",
     "label": "online",
-    "start": "1 мая 2025",
-    "duration": "48 недель",
-    "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
+    "start": "7 февраля 2025",
+    "duration": "52 недели",
+    "description": "Еженедельная лаборатория переговоров. Прокачивай переговорные навыки! Научись вести переговоры с кем угодно! Договаривайся в самых сложных условиях!",
     "detailsUrl": "../enroll-hfn-online.html",
-    "signupUrl": "../enroll-hfn-online.html",
-    "monthGroup": "Май 2025"
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagR4qZ237c4pKCOV/form",
+    "monthGroup": "Февраль 2025"
   },
   {
     "id": 2,
@@ -17,9 +16,9 @@
     "label": "online",
     "start": "17 июня 2025",
     "duration": "4 недели",
-    "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
+    "description": "Этот курс для тех кто хочет вернуть контроль над финансами в семье, а точнее - настроить их раз и навсегда!",
     "detailsUrl": "../enroll-hfn-online.html",
-    "signupUrl": "../enroll-hfn-online.html",
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagZOAJPwZwNqcrq1/form",
     "monthGroup": "Июнь 2025"
   },
   {
@@ -28,9 +27,9 @@
     "label": "online",
     "start": "15 июля 2025",
     "duration": "4 недели",
-    "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
+    "description": "P&L и  CashFlow семьи? Разве это возможно? Научитесь держать в порядки свои финансы и бонусом получите файл, который можно использовать даже в бизнесе!",
     "detailsUrl": "../enroll-hfn-online.html",
-    "signupUrl": "../enroll-hfn-online.html",
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagS4TqLlYv4DEtrG/form",
     "monthGroup": "Июль 2025"
   },
   {
@@ -39,9 +38,9 @@
     "label": "online",
     "start": "16 сентября 2025",
     "duration": "4 недели",
-    "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
+    "description": "Все системы управления временем не работают! Научись управлять собой и у тебя всегда будет время на себя! Другое название курса - «Как разобрать завалы дел»",
     "detailsUrl": "../enroll-hfn-online.html",
-    "signupUrl": "../enroll-hfn-online.html",
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagunZgreEWk6mTfn/form",
     "monthGroup": "Сентябрь 2025"
   },
   {
@@ -50,9 +49,9 @@
     "label": "online",
     "start": "4 ноября 2025",
     "duration": "4 недели",
-    "description": "Во втором блоке разберем темы как управлять группой людей и как вписать себя в новую группу органично",
+    "description": "Легендарный курс об управлении. Настоящий практический менеджмент. Авторская методика проверенная и опробованная в десятках организаций",
     "detailsUrl": "../enroll-hfn-online.html",
-    "signupUrl": "../enroll-hfn-online.html",
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagBk3rbLNUsVeP32/form",
     "monthGroup": "Ноябрь 2025"
   },
   {
@@ -61,9 +60,9 @@
     "label": "запись",
     "lessons": 16,
     "graduates": 310,
-    "description": "Лекции. В ходе которых разберем кто мы такие...",
+    "description": "Этот курс для тех кто хочет вернуть контроль над финансами в семье, а точнее - настроить их раз и навсегда! P&L, CashFlow и другие страшные слова больше Вас не испугают!",
     "detailsUrl": "../enroll-hfn.html",
-    "signupUrl": "../enroll-hfn.html"
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagpiBla93wOKhTlY/form"
   },
   {
     "id": 7,
@@ -71,9 +70,9 @@
     "label": "запись",
     "lessons": 32,
     "graduates": 310,
-    "description": "Лекции. В ходе которых разберем кто мы такие...",
+    "description": "Легендарный курс об управлении. Настоящий практический менеджмент. Авторская методика проверенная и опробованная в десятках организаций.",
     "detailsUrl": "../enroll-ul-1.html",
-    "signupUrl": "../enroll-ul-1.html"
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagIU8X2v7DNhs0qE/form"
   },
   {
     "id": 8,
@@ -81,8 +80,18 @@
     "label": "запись",
     "lessons": 152,
     "graduates": 310,
-    "description": "Лучший курс для операционного руководителя бизнеса...",
+    "description": "На программы МВА идут не ради знаний, а ради нетворкинга. Этот курс не об этом! Научись всему, что должен знать операционный руководитель компании! Только для настоящих CEO и тех, кто хочет им стать.",
     "detailsUrl": "../enroll-mba.html",
-    "signupUrl": "../enroll-mba.html"
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagVxdtNucmzqBaSy/form"
+  },
+  {
+    "id": 9,
+    "title": "Управление проектами",
+    "label": "запись",
+    "lessons": 16,
+    "graduates": 31,
+    "description": "Изучили Agile, Scrum, Kanban, но сроки по проектам плывут, а бюджеты тают? Разберитесь что же все таки главное в управлении проектами!",
+    "detailsUrl": "../enroll-mba.html",
+    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagxwg6Gr6FBU8706/form"
   }
 ]
