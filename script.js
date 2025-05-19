@@ -41,6 +41,7 @@ function renderCourses(coursesData, filter = 'all') {
       <p class="text-md mb-3 mt-1 leading-relaxed text-gray-600">${course.description}</p>
       <div class="flex gap-2">
         <a href="${course.signupUrl}" class="bg-primary text-white py-1.5 px-4 text-sm rounded-lg hover:opacity-90 transition-all">Записаться</a>
+        ${course.detailsUrl ? `<a href="${course.detailsUrl}" class="border border-primary text-primary py-1.5 px-4 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">Подробнее</a>` : ''}
       </div>
     `;
     coursesContainer.appendChild(card);
@@ -63,3 +64,22 @@ function setupFilters(coursesData) {
 }
 
 document.addEventListener('DOMContentLoaded', loadCourses);
+
+// Функция для отправки статистики переходов
+function trackUTM() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const src = urlParams.get('src');
+    
+    if (src) {
+        fetch('/track', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ src })
+        }).catch(err => console.error('Ошибка отправки данных:', err));
+    }
+}
+
+// Запуск трекера при загрузке страницы
+window.addEventListener('DOMContentLoaded', trackUTM);
