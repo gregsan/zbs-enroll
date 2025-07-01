@@ -1,107 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Запись на курс "Финансы семьи" | #ZBS Zorin Business School</title>
-	</title>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="tailwind.config.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Запись на курсы | #ZBS Zorin Business School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed flex flex-col min-h-screen">
-	<!-- Навигация -->
-	<nav class="bg-white shadow">
-		<div class="container mx-auto px-4 py-3">
-			<p class="font-semibold text-lg text-gray-800">#ZBS | Zorin Business School</p>
-		</div>
-	</nav>
+<body class="bg-gray-100 text-white min-h-screen flex flex-col justify-between leading-relaxed text-base">
+  <div class="max-w-lg mx-auto w-full p-4">
+    <h1 class="text-4xl font-bold text-center mb-4 text-black leading-tight">Zorin Business School</h1>
+    <h2 class="text-2xl font-semibold text-center mb-6 text-black">Расписание курсов</h2>
 
-	<!-- Контент -->
-	<main class="container mx-auto px-4 py-8 flex-1">
-		<div class="lg:flex lg:space-x-8">
-			<!-- Основная колонка -->
-			<section class="lg:w-2/3">
-				<img src="https://images.pexels.com/photos/3808818/pexels-photo-3808818.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&dpr=2" alt="Course Image" class="w-full rounded-lg shadow mb-6 animate-fadeIn">
-				<h1 class="text-3xl font-bold mb-2">Финансы семьи</h1>
-				<p class="text-gray-600 italic mb-4">Говорят, что деньги — корень всякого зла. То же самое можно сказать о безденежье © Сэмюэл Батлер</p>
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <button data-filter="online" class="filter-btn border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition hover:bg-primary hover:text-white">Онлайн курсы</button>
+      <button data-filter="запись" class="filter-btn border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium transition hover:bg-primary hover:text-white">Записи курсов</button>
+    </div>
 
-				<h5 class="text-xl font-semibold mb-2">Описание курса</h5>
-				<p class="mb-4">Финансами очень легко управлять. Когда один и доходы выше расходов. По сути, все управление сводится к контролю желаний.</p>
-				<p class="mb-4">Финансами не сложно управлять. Когда муж и жена работают и у каждого сумма заработка позволяет нормально жить одному. По сути, все управление сводится к договоренности о том какую сумму нужно каждому дать «на общак».</p>
-				<p class="mb-4">В реальной жизни таких ситуаций не так уж много. А если и есть, то длится это не так уж долго.</p>
-				<p class="mb-4">О чем большинство курсов по финансам? О том как откладывать и инвестировать. Точнее о том, как отложить жизнь на потом и красиво потерять деньги.</p>
-				<p class="mb-4">О чем остальные, которые не входят в это большинство? О учете. О программках, которые помогут фиксировать расходы, раскладывая их на разные группы.</p>
-				<p class="mb-4">О чем этот курс?</p>
-				<p class="mb-4">Управление – это способность изменять ситуацию в разных условиях туда куда вам нужно. Управление финансами семьи намного сложнее, чем управление финансами любого бизнеса.</p>
-				<p class="mb-4">Однако, любое сложное – это набор довольно простых операций. Сложность возникает из-за незнания этих простых операций, в попытке нащупать их, делая рефлексивные попытки.</p>
-				<p class="mb-4">Этот курс про те самые простые операции, которые превращают сложную задачу в понятную. Задача не становится проще, но она становится решаемой.</p>
-				<p class="mb-4">Этот курс про планирование, умение договариваться.</p>
-				<p class="mb-4">Этот курс про контроль, умение разделять обязанности и доверять друг другу.</p>
-				<p class="mb-4">Этот курс про умение считать деньги и считаться с мнением другого.</p>
-				<p class="mb-4">Хотя курс про финансы, но, в конечном счете, он про простое семейное счастье</p>
+    <div id="courses" class="flex flex-col gap-6"></div>
+  </div>
 
-				<h5 class="text-xl font-semibold mb-2">Что вы получите:</h5>
-				<ul class="list-disc list-inside mb-6 space-y-1">
-					<li>13 лекций</li>
-					<li>Пожизненный доступ к материалам курса</li>
-					<li>Сертификат по окончании</li>
-				</ul>
+  <footer class="text-center text-sm text-gray-500 py-4 w-full bg-gray-100">© 2025 #ZBS | Zorin Business School. Design & Develop with ❤️ by Gr.</footer>
 
-				<h5 class="text-xl font-semibold mb-4">План курса</h5>
-				<div class="space-y-4">
-						<!-- Аккордеон -->
-						<div x-data="{ open: 1 }" class="space-y-2">
-								<template x-for="item in [
-										{ id: 1, title: '0. Введение в курс', content: ['Зачем нужен еще один курс?', 'О чем этот курс', 'Логика построения курса. Темы курса', 'Краткое описание каждой части курса', 'Методика проведения курса'] },
-										{ id: 2, title: '1. Как управлять финансами семьи и не ругаться', content: ['Лекция #1 Основные принципы управления финансами.','Практика к лекции 1','Лекция #2 Распределение ролей и зон ответственности.','Практика к лекции 2','Лекция #3 Без чего невозможно управления.','Практика к лекции 3','Лекция #4 Как позволить себе то, что кажется невозможным без влезания в долги.','Практика к лекции 4'] },
-										{ id: 3, title: '2. P&L и cashflow семьи', content: ['Лекция #1 (5) Управление доходами и затратами компании «Семья».','Практика к лекции 1 (5)','Лекция #2 (6) Методы и алгоритмы моделирования, планирования, принятия целей, контроль достижения планов.','Практика к лекции 2 (6)','Лекция #3 (7) Как сделать свою семью планово-прибыльной.','Практика к лекции 3 (7)','Лекция #4 (8) Аналитика и принятие решений в семейных финансах','Практика к лекции 4 (8)'] }
-								]">
-										<div>
-												<button @click="open = (open === item.id ? null : item.id)" class="w-full flex justify-between items-center bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
-														<span class="font-medium" x-text="item.title"></span>
-														<svg x-bind:class="{'transform rotate-180': open===item.id}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-														</svg>
-												</button>
-												<div x-show="open===item.id" x-collapse class="bg-white p-4 text-gray-700 rounded-b-lg shadow-inner">
-														<ul class="list-disc list-inside space-y-1">
-																<template x-for="line in item.content">
-																		<li x-text="line"></li>
-																</template>
-														</ul>
-												</div>
-										</div>
-								</template>
-						</div>
-				</div>
-				
-
-				<!-- Airtable embed -->
-				<iframe id="enroll" class="w-full h-[970px] mt-6 rounded-lg shadow" src="https://airtable.com/embed/app0ssaLp2gdpIowR/pagZOAJPwZwNqcrq1/form" frameborder="0" style="background: transparent;"></iframe>
-			</section>
-
-			<!-- Боковая панель -->
-			<aside class="lg:w-1/3 mt-8 lg:mt-0">
-				<div class="bg-white p-6 rounded-xl shadow-md space-y-3">
-					<h4 class="text-xl font-semibold">Детали курса</h4>
-					<p><i class="fas fa-layer-group text-primary mr-2"></i>16 занятий</p>
-					<p><i class="fas fa-user text-primary mr-2"></i>30+ выпускников</p>
-					<p><i class="fas fa-clock text-primary mr-2"></i>Длительность: 8 недель</p>
-					<p><i class="fas fa-clock text-primary mr-2"></i>Начало: 17 июня 2025</p>
-					<p><i class="fas fa-clock text-primary mr-2"></i>Стоимость: 12 000 грн</p>
-					<a href="#enroll" class="block text-center bg-primary text-white py-2 rounded-full font-semibold hover:opacity-90 transition mt-4">Записаться</a>
-				</div>
-			</aside>
-		</div>
-	</main>
-
-	<!-- Футер -->
-	<footer class="bg-white text-center text-sm text-gray-500 py-4 mt-8">
-		© 2025 #ZBS | Zorin Business School. Design & Develop with ❤️ by Gr.
-	</footer>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.12.0/dist/cdn.min.js" defer></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

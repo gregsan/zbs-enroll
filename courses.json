@@ -17,8 +17,8 @@
     "start": "16 сентября 2025",
     "duration": "7 недель",
     "description": "Все системы управления временем не работают! Научись управлять собой и у тебя всегда будет время на себя",
-    "detailsUrl": "../enroll-atm.html",
-    "signupUrl": "../enroll-atm.html#enroll-atm",
+    "detailsUrl": "../atm.html",
+    "signupUrl": "../atm.html#enroll-atm",
     "monthGroup": "Сентябрь 2025"
   },
   {
@@ -37,10 +37,10 @@
     "title": "Финансы семьи",
     "label": "запись",
     "lessons": 16,
-    "graduates": 310,
+    "graduates": "50+",
     "description": "Этот курс для тех кто хочет вернуть контроль над финансами в семье, а точнее - настроить их раз и навсегда! P&L, CashFlow и другие страшные слова больше Вас не испугают!",
-    "detailsUrl": "",
-    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagpiBla93wOKhTlY/form"
+    "detailsUrl": "../hfn.html",
+    "signupUrl": "../hfn.html#enroll-hfn"
   },
   {
     "id": 7,
@@ -49,8 +49,8 @@
     "lessons": 32,
     "graduates": 310,
     "description": "Легендарный курс об управлении. Настоящий практический менеджмент. Авторская методика проверенная и опробованная в десятках организаций.",
-    "detailsUrl": "",
-    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagIU8X2v7DNhs0qE/form"
+    "detailsUrl": "../ul.html",
+    "signupUrl": "../ul.html#enroll-ul"
   },
   {
     "id": 8,
@@ -66,10 +66,10 @@
     "id": 9,
     "title": "Управление проектами",
     "label": "запись",
-    "lessons": 16,
+    "lessons": 8,
     "graduates": 31,
     "description": "Изучили Agile, Scrum, Kanban, но сроки по проектам плывут, а бюджеты тают? Разберитесь что же все таки главное в управлении проектами!",
-    "detailsUrl": "",
-    "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagxwg6Gr6FBU8706/form"
+    "detailsUrl": "../pjc.html",
+    "signupUrl": "../pjc.html#enroll-pjc"
   }
 ]
