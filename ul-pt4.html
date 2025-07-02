@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Course Details</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="tailwind.config.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed flex flex-col min-h-screen">
+	<!-- Навигация -->
+	<nav class="bg-white shadow">
+		<div class="container mx-auto px-4 py-3">
+			<p class="font-semibold text-lg text-gray-800">#ZBS | Zorin Business School</p>
+		</div>
+	</nav>
+
+	<!-- Контент -->
+	<main class="container mx-auto px-4 py-8 flex-1">
+		<div class="lg:flex lg:space-x-8">
+			<!-- Основная колонка -->
+			<section class="lg:w-2/3">
+				<img src="https://images.pexels.com/photos/3808818/pexels-photo-3808818.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&dpr=2" alt="Course Image" class="w-full rounded-lg shadow mb-6 animate-fadeIn">
+				<h1 class="text-3xl font-bold mb-2">Управление людьми 2.0</h1>
+				<p class="text-gray-600 italic mb-4">Цитата или подзаголовок</p>
+
+				<h5 class="text-xl font-semibold mb-2">Описание курса</h5>
+				<p class="mb-4">Скажем сразу – это большой курс!</p>
+				<p class="mb-4">В лекциях курса приведены максимально прикладные знания. А для закрепления и вопросов есть практические занятия.</p>
+				<p class="mb-4">Курс состоит из 2-х блоков. В каждом блоке по 3 части (6 частей всего). Планируется, что каждая часть будет состоять из 4 лекций и 4 практических занятий (24 лекции и 20 практик всего). Формат занятия следующий: сначала лекция, которая длиться не дольше 2-х часов, а потом практическое занятие, на котором разбираем кейсы и вопросы участников.</p>
+				<p class="mb-4">Каждая часть связана с предыдущей, но имеет отдельную смысловую законченность, то есть если Вас очень заинтересовала именно 3 часть, к примеру, Вы можете начать с нее, а затем вернуться к первой. Хотя последовательное прохождение по порядку несомненно выигрышнее</p>
+
+				<h5 class="text-xl font-semibold mb-2">Что вы получите:</h5>
+				<ul class="list-disc list-inside mb-6 space-y-1">
+					<li>44 занятия</li>
+					<li>Более 100 часов видео материалов</li>
+					<li>Более 100 прикладных «жизненных» кейсов на практических занятиях</li>
+					<li>Пожизненный доступ к материалам курса</li>
+					<li>Сертификат по окончании</li>
+				</ul>
+
+				<h5 class="text-xl font-semibold mb-4">План курса</h5>
+				<div class="space-y-4">
+						<!-- Аккордеон -->
+						<div x-data="{ open: 1 }" class="space-y-2">
+								<template x-for="item in [
+										{ id: 1, title: '0. Вводное занятие', content: ['Зачем нужен еще один курс?', 'О чем этот курс', 'Логика построения и темы курса', 'Краткое описание каждой части курса', 'Методика проведения курса'] },
+										{ id: 2, title: '1. Управление собой', content: ['Лекция #1 Термины курса, устройство меня, 5 базовых слоев', 'Лекция #2 Оценка состояния, энергия, внутренний диалог и рефлексия', 'Лекция #3 Свобода воли, методы для управления собой', 'Лекция #4 Применение знаний в кейсах'] },
+										{ id: 3, title: '2. Управление отношениями с кем-то', content: ['Лекция #5 Оценка другого, общее во взаимодействии, типы, границы, роли','Разбор кейсов на практике', 'Лекция #6 Информация, формальная логика, восприятие', 'Разбор кейсов на практике',  'Лекция #7 Провокации и конфликт', 'Разбор кейсов на практике. Паттерны поведения',  'Лекция #8 Социальные связи, рабочая дистанция, забота, личное пространство'] },
+										{ id: 4, title: '3. Управление группой', content: ['Лекция #9 Базовые знания про особенности групп, синергия', 'Разбор кейсов на практике', 'Лекция #10 Методы управления группой, принципы работы группы', 'Разбор кейсов на практике', 'Лекция #11 Основы планирования и контроля работы группы, совещания', 'Разбор кейсов на практике', 'Лекция #12 Основы внутренней культуры группы', 'Разбор кейсов на практике'] }
+								]">
+										<div>
+												<button @click="open = (open === item.id ? null : item.id)" class="w-full flex justify-between items-center bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
+														<span class="font-medium" x-text="item.title"></span>
+														<svg x-bind:class="{'transform rotate-180': open===item.id}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+														</svg>
+												</button>
+												<div x-show="open===item.id" x-collapse class="bg-white p-4 text-gray-700 rounded-b-lg shadow-inner">
+														<ul class="list-disc list-inside space-y-1">
+																<template x-for="line in item.content">
+																		<li x-text="line"></li>
+																</template>
+														</ul>
+												</div>
+										</div>
+								</template>
+						</div>
+				</div>
+				
+
+				<!-- Airtable embed -->
+				<iframe id="enroll-ul" class="w-full h-[600px] mt-6 rounded-lg shadow" src="https://airtable.com/embed/app0ssaLp2gdpIowR/pagBk3rbLNUsVeP32/form" frameborder="0" style="background: transparent;"></iframe>
+			</section>
+
+			<!-- Боковая панель -->
+			<aside class="lg:w-1/3 mt-8 lg:mt-0">
+				<div class="bg-white p-6 rounded-xl shadow-md space-y-3">
+					<h4 class="text-xl font-semibold">Детали курса</h4>
+					<p><i class="fas fa-layer-group text-primary mr-2"></i>44 Занятия</p>
+					<p><i class="fas fa-user text-primary mr-2"></i>200+ Выпускников</p>
+					<p><i class="fas fa-clock text-primary mr-2"></i>Длительность: 6 месяцев</p>
+					<p><i class="fas fa-clock text-primary mr-2"></i>Стоимость: 18 000 грн</p>
+					<a href="#enroll-ul" class="block text-center bg-primary text-white py-2 rounded-full font-semibold hover:opacity-90 transition mt-4">Записаться</a>
+				</div>
+			</aside>
+		</div>
+	</main>
+
+	<!-- Футер -->
+	<footer class="bg-white text-center text-sm text-gray-500 py-4 mt-8">
+		© 2025 #ZBS | Zorin Business School. Design & Develop with ❤️ by Gr.
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
