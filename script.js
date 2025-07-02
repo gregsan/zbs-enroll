@@ -30,7 +30,6 @@ function renderCourses(coursesData, filter = 'all') {
     card.innerHTML = `
       <div class="flex justify-between items-center mb-3 text-gray-700">
         <h3 class="text-2xl font-semibold">${course.title}</h3>
-        <span class="text-xs px-2 py-1 rounded-full ${course.label === 'online' ? 'bg-online text-white' : 'bg-recorded text-white'}">${course.label}</span>
       </div>
       ${course.label === 'online' ? `
         <p class="text-md mb-1 font-medium text-gray-600">Старт: <span class="font-normal">${course.start}</span></p>
@@ -40,9 +39,12 @@ function renderCourses(coursesData, filter = 'all') {
         <p class="text-md mb-1 font-medium text-gray-600">Выпускников: ${course.graduates}</p>`}
       <p class="text-md mb-3 mt-1 leading-relaxed text-gray-600">${course.description}</p>
       <div class="flex gap-2">
-        <a href="${course.signupUrl}" class="bg-primary text-white py-1.5 px-4 text-sm rounded-lg hover:opacity-90 transition-all">Записаться</a>
+        <a href="${course.signupUrl}" class="bg-primary text-white py-1.5 px-4 text-sm rounded-lg hover:opacity-90 transition-all">
+          ${course.label === 'online' ? 'Записаться на live' : 'Получить запись'}
+        </a>
         ${course.detailsUrl ? `<a href="${course.detailsUrl}" class="border border-primary text-primary py-1.5 px-4 text-sm rounded-lg hover:bg-primary hover:text-white transition-all">Подробнее</a>` : ''}
       </div>
+
     `;
     coursesContainer.appendChild(card);
   });
