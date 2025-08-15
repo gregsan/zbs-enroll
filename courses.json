@@ -23,6 +23,17 @@
   },
   {
     "id": 5,
+    "title": "Коммерческие предложения",
+    "label": "online",
+    "start": "2 и 4 сентября 2025",
+    "duration": "4 часа",
+    "description": "Как подготовить рабочее коммерческое предложение",
+    "detailsUrl": "../cof.html",
+    "signupUrl": "../cof.html#enroll-cof",
+    "monthGroup": "Сентябрь 2025"
+  },
+  {
+    "id": 6,
     "title": "Управление людьми. Часть 4",
     "label": "online",
     "start": "4 ноября 2025",
@@ -33,7 +44,7 @@
     "monthGroup": "Ноябрь 2025"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Финансы семьи",
     "label": "запись",
     "lessons": 17,
@@ -43,7 +54,7 @@
     "signupUrl": "../hfn.html#enroll-hfn"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Управление людьми (Блок 1)",
     "label": "запись",
     "lessons": 32,
@@ -53,7 +64,7 @@
     "signupUrl": "../ul.html#enroll-ul"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "MBA от Зорина",
     "label": "запись",
     "lessons": 152,
@@ -63,7 +74,7 @@
     "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagVxdtNucmzqBaSy/form"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Управление проектами",
     "label": "запись",
     "lessons": 8,
@@ -71,16 +82,5 @@
     "description": "Изучили Agile, Scrum, Kanban, но сроки по проектам плывут, а бюджеты тают? Разберитесь что же все таки главное в управлении проектами!",
     "detailsUrl": "../pjc.html",
     "signupUrl": "../pjc.html#enroll-pjc"
-  },
-    {
-    "id": 10,
-    "title": "Коммерческие предложения",
-    "label": "online",
-    "start": "2 и 4 сентября 2025",
-    "duration": "4 часа",
-    "description": "Как подготовить рабочее коммерческое предложение",
-    "detailsUrl": "../cof.html",
-    "signupUrl": "../cof.html#enroll-cof",
-    "monthGroup": "Сентябрь 2025"
   }
 ]
