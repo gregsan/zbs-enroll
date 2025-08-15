@@ -71,5 +71,16 @@
     "description": "Изучили Agile, Scrum, Kanban, но сроки по проектам плывут, а бюджеты тают? Разберитесь что же все таки главное в управлении проектами!",
     "detailsUrl": "../pjc.html",
     "signupUrl": "../pjc.html#enroll-pjc"
+  },
+    {
+    "id": 10,
+    "title": "Коммерческие предложения",
+    "label": "online",
+    "start": "2 и 4 сентября 2025",
+    "duration": "4 часа",
+    "description": "Как подготовить рабочее коммерческое предложение",
+    "detailsUrl": "../cof.html",
+    "signupUrl": "../cof.html#enroll-cof",
+    "monthGroup": "Сентябрь 2025"
   }
 ]
