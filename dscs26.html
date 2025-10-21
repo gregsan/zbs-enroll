@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Запись на воркшоп по переговорам | #ZBS Zorin Business School</title>
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed flex flex-col min-h-screen">
+  <!-- Навигация -->
+  <nav class="bg-white shadow">
+    <div class="container mx-auto px-4 py-3">
+      <a href="https://enroll.zorin.mba"class="font-semibold text-lg text-gray-800">#ZBS | Zorin Business School</a>
+    </div>
+  </nav>
+
+  <!-- Контент -->
+  <main class="container mx-auto px-4 py-8 flex-1">
+    <div class="lg:flex lg:space-x-8">
+      <!-- Основная колонка -->
+      <section class="lg:w-2/3">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&dpr=2" alt="Course Image" class="w-full rounded-lg shadow mb-6 animate-fadeIn">
+        <h1 class="text-3xl font-bold mb-2">Воркшоп по переговорам (2026)</h1>
+        <!-- <p class="text-gray-600 italic mb-4">Как убрать суету и спешку из своей жизни</p> -->
+
+        <h5 class="text-xl font-semibold mb-2">Описание воркшопа</h5>
+        <p class"mb-4"> Еженедельный разбор переговорных кейсов. Обсуждение упражнений, развивающих переговорные навыки.</p>
+        <p class"mb-4"> Каждая встреча независима. Это позволяет подключаться новым участникам в любое время и не чувствовать неудобства.</p>
+        <p class"mb-4"> Вся методика построена на дискуссионно-клубном формате. Это позволяет встречаться без напряжения, участвовать в процессе движения, стоя в пробках, отвлекаясь. Непринужденное и ни к чему не обязывающее общение.</p>
+        <p class"mb-4"> Поднимаем темы, запланированные преподавателем и рассматриваем кейсы участников.</p>
+        <p class"mb-4"> Детальные разборы и исследования с точки зрения различных методик.</p>
+
+        <h5 class="text-xl font-semibold mb-2">Что вы получите:</h5>
+        <ul class="list-disc list-inside mb-6 space-y-1">
+          <li>Запись 35+ занятий</li>
+          <li>Пожизненный доступ к материалам воркшопа</li>
+        </ul>
+
+        <h5 class="text-xl font-semibold mb-2">Доступные опции:</h5>
+        <ul class="list-disc list-inside mb-6 space-y-1">
+          <li>При подключении к обучению предоставляется доступ записи всех предыдущих встреч с начала года.</li>
+          <li>Заявка на пробный бесплатный доступ на ближайшую встречу или на демо-запись 2-х встреч</li>
+        </ul>
+
+
+        <h5 class="text-xl font-semibold mb-4">План курса</h5>
+        <div class="space-y-4">
+            <!-- Аккордеон -->
+            <div x-data="{ open: 1 }" class="space-y-2">
+                <template x-for="item in [
+                  { id: 1, title: 'Темы, рассматриваемые в течении года', content: ['Активное слушание','Постановка своих целей','Детекция целей другой стороны','Аргументация при дискуссии','Противодействие манипуляциям','Формирование предложений','Составление дизайна переговоров','Подготовка переговоров'] },
+                  { id: 2, title: 'Кейсы по темам', content: ['Партнерские переговоры и сотрудничество','Коммерческие (продажа/закупка)','Трудовые споры','Претензии и недовольство'] },
+                  { id: 3, title: 'Области бизнеса', content: ['Инвестиции','Недвижимость','Консалтинг','Услуги','b2b, b2c'] }
+                ]">
+                    <div>
+                        <button @click="open = (open === item.id ? null : item.id)" class="w-full flex justify-between items-center bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
+                            <span class="font-medium" x-text="item.title"></span>
+                            <svg x-bind:class="{'transform rotate-180': open===item.id}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="open===item.id" x-collapse class="bg-white p-4 text-gray-700 rounded-b-lg shadow-inner">
+                            <ul class="list-disc list-inside space-y-1">
+                                <template x-for="line in item.content">
+                                    <li x-text="line"></li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        
+
+        <!-- Airtable embed -->
+        <iframe id="enroll-cstr" class="w-full h-[600px] mt-6 rounded-lg shadow" src="https://airtable.com/embed/app0ssaLp2gdpIowR/pagflyjW3v7C41wUt/for" frameborder="0" style="background: transparent;"></iframe>
+      </section>
+
+      <!-- Боковая панель -->
+      <aside class="lg:w-1/3 mt-8 lg:mt-0">
+        <div class="bg-white p-6 rounded-xl shadow-md space-y-3">
+          <h4 class="text-xl font-semibold">Детали курса</h4>
+          <p><i class="fa-solid fa-layer-group text-primary mr-2"></i>Занятий: 2</p>
+          <p><i class="fa-solid fa-user text-primary mr-2"></i>Доступных мест: 20+</p>
+          <p><i class="fa-solid fa-calendar-days text-primary mr-2"></i>Длительность: 35+ недель</p>
+          <p><i class="fa-solid fa-clock text-primary mr-2"></i>Время: каждая пятница, 18:00-20:00 (по Киеву)</p>
+          <p><i class="fa-solid fa-money-bill text-primary mr-2"></i>Цена: €2 500 <i class="text-gray-600 italic">возможен гибкий график оплат</p>
+          <a href="#enroll-dscs26" class="block text-center bg-primary text-white py-2 rounded-full font-semibold hover:opacity-90 transition mt-4">Записаться</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-white text-center text-sm text-gray-500 py-4 mt-8">
+    © 2025 #ZBS | Zorin Business School.</br> Design & Develop with ❤️ by Gr.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
