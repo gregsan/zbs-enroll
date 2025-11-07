@@ -10,17 +10,7 @@
     "signupUrl": "https://airtable.com/app0ssaLp2gdpIowR/pagR4qZ237c4pKCOV/form",
     "monthGroup": "★ Весь год"
   },
-  {
-    "id": 6,
-    "title": "Управление людьми. Часть 4",
-    "label": "online",
-    "start": "4 ноября 2025",
-    "duration": "4 недели",
-    "description": "В этой части курса рассмотрим отношения с друзьями, соседями, одногруппниками и партнерами по бизнесу",
-    "detailsUrl": "../ul-pt4.html",
-    "signupUrl": "https://airtable.com/embed/app0ssaLp2gdpIowR/pagBk3rbLNUsVeP32/form",
-    "monthGroup": "Ноябрь 2025"
-  },
+  
   {
     "id": 13,
     "title": "Проектируем структуру компании",
